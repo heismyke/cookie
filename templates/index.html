@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Luna Virtual Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="mainbody">
+    <div id="contents">
+        <button class="commands" onclick="openCamera()">Open camera</button>
+        <button class="commands" onclick="openCalculator()">Open calculator</button>
+        <button class="commands" onclick="askQuestion()">Ask a question</button>
+        <button class="commands" onclick="recommendRestaurant()">Recommend Restaurant</button>
+        <button class="commands" onclick="recommendMusic()">Recommend Music</button>
+        <button class="commands" onclick="openMail()">Open Mail</button>
+        <button class="commands" onclick="openVsCode()">Open VsCode</button>
+    </div>
+    <div id="voxie">
+        <div id="icon">
+            <svg style="color: rgb(62, 0, 62);" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 50 50">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M28.991 27.991c3.515-3.514 1.3-11.429-4.95-17.677C17.794 4.065 9.88 1.849 6.365 5.364c-3.515 3.515-1.299 11.43 4.95 17.678c6.248 6.248 14.163 8.464 17.677 4.95" />
+                    <path d="M28.991 19.065c3.515 3.514 1.299 11.429-4.95 17.677c-6.248 6.249-14.162 8.465-17.677 4.95c-3.515-3.515-1.299-11.43 4.95-17.678c6.248-6.248 14.163-8.464 17.677-4.95" />
+                    <path d="M20.009 27.991c-3.515-3.514-1.299-11.429 4.95-17.677c6.248-6.249 14.162-8.465 17.677-4.95c3.515 3.515 1.299 11.43-4.95 17.678c-6.248 6.248-14.163 8.464-17.677 4.95" />
+                    <path d="M20.009 19.065c-3.515 3.514-1.299 11.429 4.95 17.677c6.248 6.249 14.162 8.465 17.677 4.95c3.515-3.515 1.299-11.43-4.95-17.678c-6.248-6.248-14.163-8.464-17.677-4.95" />
+                </g>
+            </svg>
+            <div id="heading">
+                <h1>Luna Virtual Assistant</h1>
+            </div>
+        </div>
+        <div id="response">
+             </div>
+        <form id="assistant-form">
+            <input type="text" id="user-input" name="user_input" placeholder="Type to Echo">
+            <button style="background: transparent;width: 50px; height: 40px;border: 1px solid white;border-radius: 10px;color: white;justify-content: center;align-items: center;" type="submit">
+                <i class="fa-regular fa-paper-plane"></i>
+            </button>
+        </form>
+        <script>
+            $(document).ready(function() {
+                $('#assistant-form').submit(function(event) {
+                    event.preventDefault();
+                    const userInput = $('#user-input').val(); // Corrected selector to '#user-input'
+        
+                    $.ajax({
+                        url: '/',
+                        type: 'POST',
+                        data: { user_input: userInput },
+                        success: function(response) {
+                            // Update the response display with the response
+                            $('#response').text(response.response); // Updated selector to '#response'
+                        }
+                    });
+                });
+            });
+
+            function openCamera() {
+                // JavaScript function to handle opening camera
+            }
+
+            function openCalculator() {
+                // JavaScript function to handle opening calculator
+            }
+
+            function askQuestion() {
+                // JavaScript function to handle asking a question
+            }
+
+            function recommendRestaurant() {
+                // JavaScript function to handle recommending a restaurant
+            }
+
+            function recommendMusic() {
+                // JavaScript function to handle recommending music
+            }
+
+            function openMail() {
+                // JavaScript function to handle opening mail
+            }
+
+            function openVsCode() {
+                // JavaScript function to handle opening VS Code
+            }
+        </script>
+    </div>
+</div>
+</body>
+</html>

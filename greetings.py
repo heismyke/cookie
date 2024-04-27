@@ -1,0 +1,53 @@
+# greetings.py
+
+greetings_responses = {
+    "hello": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I help you with?",
+        "Greetings! I'm here to help. What do you need?",
+    ],
+    "how_are_you": [
+        "I'm good, thank you!",
+        "Feeling great!",
+        "I'm doing well!",
+        "Pretty good, thanks for asking!",
+        "I'm great!",
+        "I'm fabulous!",
+    ],
+    "who_are_you": [
+        "I am Luna, your virtual assistant.",
+        "I am here to assist you as Luna.",
+        "I am Luna, at your service.",
+        "I am your virtual assistant, Luna.",
+        "I am Luna, a helpful AI.",
+        "I am Luna, ready to help you.",
+        "I am Luna, your friendly assistant.",
+        "I am Luna, your digital companion.",
+        "I am Luna, your AI assistant.",
+        "I am Luna, always here to help.",
+    ],
+    "whats_your_name": [
+        "It's nice to meet you, I am Luna.",
+        "I am Luna, your virtual assistant.",
+        "You can call me Luna.",
+        "I am Luna, ready to assist you.",
+        "I am Luna, your AI companion.",
+        "I am Luna, at your service.",
+        "My name is Luna, nice to meet you.",
+        "You can refer to me as Luna.",
+        "I am Luna, your helpful assistant.",
+        "I am Luna, your digital friend.",
+    ],
+    "goodbye": [
+        "Goodbye! Have a great day.",
+        "See you later!",
+        "Farewell!",
+        "Take care!",
+        "Until next time!",
+        "Goodbye, friend!",
+        "Bye for now!",
+        "Catch you later!",
+        "Adios!",
+        "So long!",
+    ],
+}
